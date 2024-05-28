@@ -1,6 +1,6 @@
 
 import "./load-url-data.js";
-import { reloadDataBinding, reloadDataBindingNested } from "../lib/element-data-binding.js";
+import { parseDataBindingSingle, parseDataBinding } from "../lib/element-data-binding.js";
 
-reloadDataBinding(document.querySelector("title"));
-reloadDataBindingNested(document.body);
+parseDataBindingSingle(document.querySelector("title"));
+parseDataBinding(document.body);

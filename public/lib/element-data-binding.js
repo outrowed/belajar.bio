@@ -3,16 +3,16 @@ import lodash from "https://esm.run/lodash@4";
 import { formatDate } from "./date-format.js";
 
 /** @param {HTMLElement} element */
-export function reloadDataBindingNested(element) {
-    reloadDataBinding(element);
+export function parseDataBinding(element) {
+    parseDataBindingSingle(element);
 
     for (const elem of element.children) {
-        reloadDataBindingNested(elem);
+        parseDataBinding(elem);
     }
 }
 
 /** @param {HTMLElement} element */
-export function reloadDataBinding(element) {
+export function parseDataBindingSingle(element) {
     const attrs = element.getAttributeNames();
 
     for (const attr of attrs) {
